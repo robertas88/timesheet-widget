@@ -1,0 +1,17 @@
+
+<div class="tw-time-sheet">
+  <tw-time-sheet-calendar
+    [events]="events"
+    (getEvents)="getEvents($event)"
+  ></tw-time-sheet-calendar>
+
+  <tw-time-sheet-task-list
+    [events]="events"
+  ></tw-time-sheet-task-list>
+
+  <div style="height: 100px;">
+    <button mat-flat-button style="width: 100%; margin-top: 32px;">Add task</button>
+  </div>
+</div>
+
+

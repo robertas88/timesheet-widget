@@ -1,0 +1,124 @@
+/* You can add global styles to this file, and also import other style files */
+
+// Orange color: #F08900, Light gray color: #F3F3F4, Gray color: #A1A1A1
+
+$orange: #f08900;
+$light-gray: #f3f3f4;
+$gray: #a1a1a1;
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto;
+}
+
+.mat-toolbar {
+  padding: 0 !important;
+}
+
+.mat-flat-button {
+  background-color: $orange !important;
+  color: #fff !important;
+  text-transform: uppercase;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.tw-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tw-selected-day {
+  background-color: $orange;
+}
+
+.tw-today {
+  border: 1px solid $orange;
+}
+
+a {
+  color: $orange;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.tw-time-sheet {
+  margin-left: auto;
+  margin-right: auto;
+  width: 350px;
+  border: 1px solid $gray;
+  padding: 12px;
+  border-radius: 4px;
+}
+
+.tw-text-small {
+  font-size: 12px;
+}
+
+.tw-text-medium {
+  font-size: 14px;
+}
+
+.tw-text {
+  font-size: 16px;
+}
+
+.tw-text-orange {
+  color: $orange;
+}
+
+.tw-text-light-gray {
+  color: $light-gray;
+}
+
+.tw-text-gray {
+  color: $gray;
+}
+
+.tw-row {
+  margin: 6px 0;
+}
+
+.tw-right {
+  text-align: right;
+}
+
+.tw-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tw-calendar-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  justify-items: center;
+
+  .tw-calendar-day {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 4px;
+  }
+
+}
+
+.tw-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.tw-grid-3 {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+}

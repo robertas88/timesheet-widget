@@ -1,0 +1,54 @@
+<div style="height: 300px; overflow-y: auto;">
+
+  <div *ngIf="hoursTasks.length">
+    <div class="tw-flex tw-row">
+      <div>
+        <mat-icon>av_timer</mat-icon>
+        Hours
+      </div>
+      <div class=tw-text-small>
+        ({{ event?.firstTaskStart | date : 'HH:mm' }} - {{ event?.lastTaskEnd | date : 'HH:mm' }})
+      </div>
+    </div>
+    <div class="tw-grid-2 tw-text-gray tw-text-small tw-row">
+      <div>Type</div>
+      <div class="tw-right">Duration</div>
+    </div>
+    <div *ngFor="let item of hoursTasks" class="tw-grid-2 tw-text-small tw-row">
+      <div>{{ item.eventTypeName }}</div>
+      <div class="tw-right">{{ item.quantity }}:00</div>
+    </div>
+  </div>
+
+  <div *ngIf="expensesTasks.length">
+    <div class="tw-row">
+      <mat-icon aria-hidden="false" aria-label="Example home icon">euro_symbol</mat-icon>
+      Expenses
+    </div>
+    <div class="tw-grid-3 tw-text-gray tw-text-small tw-row">
+      <div>Type</div>
+      <div class="tw-right">Quantity</div>
+      <div class="tw-right">Total</div>
+    </div>
+    <div *ngFor="let item of expensesTasks" class="tw-grid-3 tw-text-small tw-row">
+      <div>{{ item.eventTypeName }}</div>
+      <div class="tw-right">{{ item.quantity }}</div>
+      <div class="tw-right">${{ (item.quantity * item.price) | number : '1.2-2' }}</div>
+    </div>
+  </div>
+
+  <div *ngIf="additionalHoursTasks.length">
+    <div class="tw-row">
+      <mat-icon>av_timer</mat-icon>
+      Additional hours
+    </div>
+    <div class="tw-grid-2 tw-text-gray tw-text-small tw-row">
+      <div>Type</div>
+      <div class="tw-right">Duration</div>
+    </div>
+    <div *ngFor="let item of additionalHoursTasks" class="tw-grid-2 tw-text-small tw-row">
+      <div>{{ item.eventTypeName }}</div>
+      <div class="tw-right">{{ item.quantity }}:00</div>
+    </div>
+  </div>
+</div>
